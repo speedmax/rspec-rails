@@ -17,7 +17,7 @@ module ControllerExampleGroupBehaviour
   def app 
     self.class.described_class.action(@_action).tap do |endpoint|
       def endpoint.routes
-        Rails.application.routes
+        ::Rails.application.routes
       end
     end
   end
